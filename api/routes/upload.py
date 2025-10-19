@@ -38,8 +38,8 @@ async def upload_file(wallet: str = Query(..., description="Wallet address"), fi
         print(f" Real IPFS upload: {file.filename} -> {cid}")
     except Exception as e:
         # Fallback to mock upload if Pinata fails
-        print(f"⚠️  Pinata upload failed: {e}")
-        print("🔄 Using mock upload as fallback...")
+        print(f" Pinata upload failed: {e}")
+        print(" Using mock upload as fallback...")
         
         file_hash = hashlib.sha256(content).hexdigest()
         cid = f"Qm{file_hash[:44]}"  # Mock IPFS CID format
