@@ -35,7 +35,7 @@ async def upload_file(wallet: str = Query(..., description="Wallet address"), fi
             raise Exception(f"Pinata error: {r.text}")
         
         cid = r.json()["IpfsHash"]
-        print(f"✅ Real IPFS upload: {file.filename} -> {cid}")
+        print(f" Real IPFS upload: {file.filename} -> {cid}")
     except Exception as e:
         # Fallback to mock upload if Pinata fails
         print(f"⚠️  Pinata upload failed: {e}")
