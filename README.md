@@ -15,7 +15,7 @@ A FastAPI backend for SPL token rewards system with real Solana blockchain integ
 
 1. **Solana CLI tools installed** (for token minting)
 2. **Python 3.8+**
-3. **Pinata account** (optional, for file uploads)
+3. **Pinata account** ( for file uploads)
 
 ## Setup
 
